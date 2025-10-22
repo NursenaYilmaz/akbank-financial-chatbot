@@ -53,10 +53,10 @@ Uygulama, otomatik olarak tarayıcınızda açılacaktır (genellikle http://loc
 | **Web Arayüzü** | Streamlit | Kullanıcı arayüzü (Front-end) ve Product Kılavuzu |
 ### 4.2. RAG (Retrieval-Augmented Generation) Mimarisi
 Proje, Akbank asistanı rolünü üstlenen kontrollü bir RAG mimarisi kullanır
-Veri Hazırlama: Q&A çiftleri yüklenir.Embedding: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 modeli ile her bir Q&A çifti vektörlere dönüştürülür.
-Vektör Veritabanı: Vektörler, FAISS'e kaydedilir.Retrieval: Kullanıcının sorusu vektöre dönüştürülerek FAISS'te en yakın 3 döküman (k=3) geri çağrılır.
-Generation: Geri çağrılan 3 döküman, Akbank asistanı kişiliğini ve yanıtlama kurallarını (nazik, Türkçe, profesyonel vb.) içeren özel bir Prompt Template'in {context} alanına yerleştirilir.
-Cevap Üretimi: Gemini 2.5 Flash modeli, bu prompt ve bağlamı kullanarak son kullanıcıya nihai cevabı üretir. Bu süreç LangChain RetrievalQA Chain ile yönetilir.
+* Veri Hazırlama: Q&A çiftleri yüklenir.Embedding: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 modeli ile her bir Q&A çifti vektörlere dönüştürülür.
+* Vektör Veritabanı: Vektörler, FAISS'e kaydedilir.Retrieval: Kullanıcının sorusu vektöre dönüştürülerek FAISS'te en yakın 3 döküman (k=3) geri çağrılır.
+* Generation: Geri çağrılan 3 döküman, Akbank asistanı kişiliğini ve yanıtlama kurallarını (nazik, Türkçe, profesyonel vb.) içeren özel bir Prompt Template'in {context} alanına yerleştirilir.
+* Cevap Üretimi: Gemini 2.5 Flash modeli, bu prompt ve bağlamı kullanarak son kullanıcıya nihai cevabı üretir. Bu süreç LangChain RetrievalQA Chain ile yönetilir.
 ## 🖥️ 5. Web Arayüzü & Product KılavuzuUygulama, kullanıcı deneyimini zenginleştirmek için 3 ana sekmeyle tasarlanmıştır.
 ### Elde Edilen Sonuçlar
 Çift Odaklı Asistan: Hem teknik bankacılık sorularına (hesap, transfer) hem de uzun vadeli finansal eğitime (bütçe, tasarruf, yatırım) odaklanan iki farklı bilgi türü tek bir RAG mimarisinde birleştirilmiştir.
