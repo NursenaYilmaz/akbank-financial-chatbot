@@ -6,3 +6,4 @@ gradio
 pandas
 datasets
 python-dotenv
+sentence-transformers
