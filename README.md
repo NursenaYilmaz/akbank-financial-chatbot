@@ -64,10 +64,12 @@ Proje, Akbank asistanı rolünü üstlenen kontrollü bir RAG mimarisi kullanır
 * Kontrollü Yanıtlama: Prompt Template, LLM'e bankanın kurumsal kimliğini ve belirli yanıt kurallarını entegre ederek daha kontrollü ve amaca uygun Türkçe yanıtlar elde edilmesini sağlar.
 * Zengin Kullanıcı Deneyimi: Streamlit arayüzü, etkileşimli sohbetin yanı sıra "Öğren" sekmesinde finansal kısa rehberler ve "Araçlar" sekmesinde basit finansal hesaplayıcılara erişim sunar.
 ###Çalışma Akışı ve Test Adımları
+
 | Sekme | Amaç | Test Adımı |
 | :--- | :--- | :--- |
 | **Sohbet Sekmesi** | Bankacılık ve finansal sorulara RAG üzerinden yanıt almak. | Hızlı Başlangıç çiplerinden birine tıklayın (örn: *Aylık bütçeyi nasıl planlarım?*) veya *Kredi kartı borcu nasıl ödenir?* gibi bir soru sorun. |
 | **Öğren Sekmesi** | Temel finansal konular hakkında hızlı rehberlik ve ipuçları sunmak. | **"Konu seçin"** menüsünden bir kategori seçin (örn: *Vadeli Mevduat*) ve **"Bu kategori için açıklama üret"** butonu ile LLM'den detaylı plan talep edin. |
 | **Araçlar Sekmesi** | Kullanıcıların temel finansal senaryoları (borç, tasarruf) simüle etmesini sağlamak. | **Borç Azaltma Simülasyonu** veya **Tasarruf Hedefi** alanlarındaki değişkenleri değiştirerek "Hesapla" veya "Planla" butonlarına tıklayın. |
+
 ## 🔗 Web LinkinizProjenizin canlı linkini buraya yapıştırın.
 Web Linki: https://akbank-financial-chatbot-x5bqhxavamrbijtbfapkms.streamlit.app/
