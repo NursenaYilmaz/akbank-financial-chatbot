@@ -11,37 +11,37 @@ Proje, iki ana veri kaynağının birleştirilmesiyle oluşturulan data/all_qa_d
 
 ## 🛠️ 3. Kodunuzun Çalışma KılavuzuBu kılavuz, projenin yerel bilgisayarınızda nasıl kurulacağını ve çalıştırılacağını açıklar.
 ### 3.1. Ön Gereksinimler
-Python 3.9+
+* Python 3.9+
 
-Google Gemini API Anahtarı
+* Google Gemini API Anahtarı
 ### 3.2. Geliştirme Ortamı Kurulumu
-Proje, bağımlılık çakışmalarını önlemek için sanal ortamda çalıştırılmalıdır.
+* Proje, bağımlılık çakışmalarını önlemek için sanal ortamda çalıştırılmalıdır.
 
 ### Sanal ortam oluşturma
-python -m venv venv
+* python -m venv venv
 
 ### Sanal ortamı etkinleştirme (Linux/macOS)
-source venv/bin/activate
+* source venv/bin/activate
 
 ### Sanal ortamı etkinleştirme (Windows)
-.\venv\Scripts\activate
+* .\venv\Scripts\activate
 
 ### Gerekli bağımlılıkları yükleme (requirements.txt dosyası deponuzda olmalıdır)
-pip install -r requirements.txt 
+* pip install -r requirements.txt 
 
 ### 3.3. API Anahtarını AyarlamaGemini modelini kullanmak için API anahtarınızı güvenli bir şekilde tanımlayın.
-Projenin ana dizininde .env adında bir dosya oluşturun.
-Anahtarınızı aşağıdaki formatta ekleyin:
-GOOGLE_API_KEY="AIzaSy...API...Key...Buraya"
+* Projenin ana dizininde .env adında bir dosya oluşturun.
+* Anahtarınızı aşağıdaki formatta ekleyin:
+* GOOGLE_API_KEY="AIzaSy...API...Key...Buraya"
 ### 3.4. Veri Hazırlığı
-RAG modelinin kullanacağı Q&A verilerini hazırlayın. Eğer data/all_qa_data.json dosyası GitHub'a eklenmediyse bu adım zorunludur.
-python data_prep.py
-Bu komut, kaynakları indirir ve 'data/all_qa_data.json' dosyasını oluşturur.
+* RAG modelinin kullanacağı Q&A verilerini hazırlayın. Eğer data/all_qa_data.json dosyası GitHub'a eklenmediyse bu adım zorunludur.
+* python data_prep.py
+* Bu komut, kaynakları indirir ve 'data/all_qa_data.json' dosyasını oluşturur.
 
 ### 3.5. Uygulamayı Başlatma
-Web arayüzünü (Streamlit) başlatarak projeyi çalıştırın:
-streamlit run app.py
-Uygulama, otomatik olarak tarayıcınızda açılacaktır (genellikle http://localhost:8501).
+* Web arayüzünü (Streamlit) başlatarak projeyi çalıştırın:
+* streamlit run app.py
+* Uygulama, otomatik olarak tarayıcınızda açılacaktır (genellikle http://localhost:8501).
 ## ⚙️ 4. Çözüm Mimarisi
 ### 4.1. Kullanılan Teknolojiler
 | Kategori | Teknoloji | Amaç |
@@ -59,10 +59,10 @@ Proje, Akbank asistanı rolünü üstlenen kontrollü bir RAG mimarisi kullanır
 * Cevap Üretimi: Gemini 2.5 Flash modeli, bu prompt ve bağlamı kullanarak son kullanıcıya nihai cevabı üretir. Bu süreç LangChain RetrievalQA Chain ile yönetilir.
 ## 🖥️ 5. Web Arayüzü & Product KılavuzuUygulama, kullanıcı deneyimini zenginleştirmek için 3 ana sekmeyle tasarlanmıştır.
 ### Elde Edilen Sonuçlar
-Çift Odaklı Asistan: Hem teknik bankacılık sorularına (hesap, transfer) hem de uzun vadeli finansal eğitime (bütçe, tasarruf, yatırım) odaklanan iki farklı bilgi türü tek bir RAG mimarisinde birleştirilmiştir.
-Kontrollü Yanıtlama: Prompt Template, LLM'e bankanın kurumsal kimliğini ve belirli yanıt kurallarını entegre ederek daha kontrollü ve amaca uygun Türkçe yanıtlar elde edilmesini sağlar.
-Zengin Kullanıcı Deneyimi: Streamlit arayüzü, etkileşimli sohbetin yanı sıra "Öğren" sekmesinde finansal kısa rehberler ve "Araçlar" sekmesinde basit finansal hesaplayıcılara erişim sunar.
-Çalışma Akışı ve Test Adımları
+* Çift Odaklı Asistan: Hem teknik bankacılık sorularına (hesap, transfer) hem de uzun vadeli finansal eğitime (bütçe, tasarruf, yatırım) odaklanan iki farklı bilgi türü tek bir RAG mimarisinde birleştirilmiştir.
+* Kontrollü Yanıtlama: Prompt Template, LLM'e bankanın kurumsal kimliğini ve belirli yanıt kurallarını entegre ederek daha kontrollü ve amaca uygun Türkçe yanıtlar elde edilmesini sağlar.
+* Zengin Kullanıcı Deneyimi: Streamlit arayüzü, etkileşimli sohbetin yanı sıra "Öğren" sekmesinde finansal kısa rehberler ve "Araçlar" sekmesinde basit finansal hesaplayıcılara erişim sunar.
+###Çalışma Akışı ve Test Adımları
 | Sekme | Amaç | Test Adımı |
 | :--- | :--- | :--- |
 | **Sohbet Sekmesi** | Bankacılık ve finansal sorulara RAG üzerinden yanıt almak. | Hızlı Başlangıç çiplerinden birine tıklayın (örn: *Aylık bütçeyi nasıl planlarım?*) veya *Kredi kartı borcu nasıl ödenir?* gibi bir soru sorun. |
