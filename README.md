@@ -57,7 +57,8 @@ Proje, Akbank asistanı rolünü üstlenen kontrollü bir RAG mimarisi kullanır
 * Vektör Veritabanı: Vektörler, FAISS'e kaydedilir.Retrieval: Kullanıcının sorusu vektöre dönüştürülerek FAISS'te en yakın 3 döküman (k=3) geri çağrılır.
 * Generation: Geri çağrılan 3 döküman, Akbank asistanı kişiliğini ve yanıtlama kurallarını (nazik, Türkçe, profesyonel vb.) içeren özel bir Prompt Template'in {context} alanına yerleştirilir.
 * Cevap Üretimi: Gemini 2.5 Flash modeli, bu prompt ve bağlamı kullanarak son kullanıcıya nihai cevabı üretir. Bu süreç LangChain RetrievalQA Chain ile yönetilir.
-## 🖥️ 5. Web Arayüzü & Product KılavuzuUygulama, kullanıcı deneyimini zenginleştirmek için 3 ana sekmeyle tasarlanmıştır.
+## 🖥️ 5. Web Arayüzü & Product Kılavuzu
+* Uygulama, kullanıcı deneyimini zenginleştirmek için 3 ana sekmeyle tasarlanmıştır.
 ### Elde Edilen Sonuçlar
 * Çift Odaklı Asistan: Hem teknik bankacılık sorularına (hesap, transfer) hem de uzun vadeli finansal eğitime (bütçe, tasarruf, yatırım) odaklanan iki farklı bilgi türü tek bir RAG mimarisinde birleştirilmiştir.
 * Kontrollü Yanıtlama: Prompt Template, LLM'e bankanın kurumsal kimliğini ve belirli yanıt kurallarını entegre ederek daha kontrollü ve amaca uygun Türkçe yanıtlar elde edilmesini sağlar.
