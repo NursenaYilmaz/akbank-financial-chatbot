@@ -71,5 +71,5 @@ Proje, Akbank asistanı rolünü üstlenen kontrollü bir RAG mimarisi kullanır
 | **Öğren Sekmesi** | Temel finansal konular hakkında hızlı rehberlik ve ipuçları sunmak. | **"Konu seçin"** menüsünden bir kategori seçin (örn: *Vadeli Mevduat*) ve **"Bu kategori için açıklama üret"** butonu ile LLM'den detaylı plan talep edin. |
 | **Araçlar Sekmesi** | Kullanıcıların temel finansal senaryoları (borç, tasarruf) simüle etmesini sağlamak. | **Borç Azaltma Simülasyonu** veya **Tasarruf Hedefi** alanlarındaki değişkenleri değiştirerek "Hesapla" veya "Planla" butonlarına tıklayın. |
 
-## 🔗 Web LinkinizProjenizin canlı linkini buraya yapıştırın.
+## 🔗 Web Linki
 Web Linki: https://akbank-financial-chatbot-x5bqhxavamrbijtbfapkms.streamlit.app/
